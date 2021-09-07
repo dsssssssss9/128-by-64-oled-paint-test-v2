@@ -1,3 +1,12 @@
+/**
+ * Demo of the Paint Funtions
+ * 
+ * After the Intro Message has played press A to see a demo of the Built-in icons
+ * 
+ * Press B to see a demo of custom icons at normal size  ( Write Matrix ) & Double size (Write Matrix Double)
+ * 
+ * Press Logo for a surprise!!
+ */
 // Dispplay 16*16 pixel frog icon at X across & Y down
 // 
 function Kermit (x: number, y: number) {
