@@ -236,6 +236,7 @@ input.onLogoEvent(TouchButtonEvent.Pressed, function () {
     kitronik_VIEW128x64.refresh()
 })
 let list2: Image[] = []
+kitronik_VIEW128x64.clear()
 // Display briew introduction text
 // 
 // 5*5 built in font so hard to read
