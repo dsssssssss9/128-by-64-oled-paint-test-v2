@@ -1,3 +1,24 @@
+function Kermit (x: number, y: number) {
+    kitronik_VIEW128x64.writeImageOLED(kitronik_VIEW128x64.matrix16x16(`
+        . # # # # . . . . . . # # # # .
+        # . . . . # # # # # # . . . . #
+        # . # # . # . . . . # . # # . #
+        # . . . . # . . . . # . . . . #
+        . # # # # . . . . . . # # # # .
+        # . . . . . . . . . . . . . . #
+        # . # # # # # # # # # # # # . #
+        # . . . . . . . . . . . . . . #
+        . # # # # # # # # # # # # # # .
+        . # # . . . . . . . . . . # # .
+        # . # . . . . . . . . . . # . #
+        # . . . # . # . . # . # . . . #
+        . # . . # . # . . # . # . . # .
+        # . . . # . # # # # . # . . . #
+        # # # # . . # . . # . . # # # #
+        . . . # # # . . . . # # # . . .
+        `), x, y)
+    kitronik_VIEW128x64.refresh()
+}
 input.onButtonPressed(Button.A, function () {
     kitronik_VIEW128x64.clear()
     for (let index = 0; index <= list2.length - 1; index++) {
@@ -165,6 +186,33 @@ input.onButtonPressed(Button.B, function () {
         . # . . . . # .
         . # . . . . . #
         `), 32, 24)
+    kitronik_VIEW128x64.refresh()
+})
+input.onLogoEvent(TouchButtonEvent.Pressed, function () {
+    kitronik_VIEW128x64.clear()
+    Kermit(0, 0)
+    Kermit(112, 0)
+    Kermit(0, 48)
+    Kermit(112, 48)
+    basic.pause(1000)
+    kitronik_VIEW128x64.writeImageDouble(kitronik_VIEW128x64.matrix16x16(`
+        . # # # # . . . . . . # # # # .
+        # . . . . # # # # # # . . . . #
+        # . # # . # . . . . # . # # . #
+        # . . . . # . . . . # . . . . #
+        . # # # # . . . . . . # # # # .
+        # . . . . . . . . . . . . . . #
+        # . # # # # # # # # # # # # . #
+        # . . . . . . . . . . . . . . #
+        . # # # # # # # # # # # # # # .
+        . # # . . . . . . . . . . # # .
+        # . # . . . . . . . . . . # . #
+        # . . . # . # . . # . # . . . #
+        . # . . # . # . . # . # . . # .
+        # . . . # . # # # # . # . . . #
+        # # # # . . # . . # . . # # # #
+        . . . # # # . . . . # # # . . .
+        `), 23, 11)
     kitronik_VIEW128x64.refresh()
 })
 let list2: Image[] = []
