@@ -106,6 +106,66 @@ input.onButtonPressed(Button.B, function () {
         # . # . . # . #
         `), 32, 8)
     kitronik_VIEW128x64.refresh()
+    basic.pause(2000)
+    kitronik_VIEW128x64.writeImageDouble(kitronik_VIEW128x64.matrix8x8(`
+        . # # # # # # #
+        . # . . . . . .
+        . # . . . . . .
+        . # # # # # # .
+        . # . . . . . .
+        . # . . . . . .
+        . # . . . . . .
+        . # . . . . . .
+        `), 0, 24)
+    kitronik_VIEW128x64.refresh()
+    basic.pause(1000)
+    kitronik_VIEW128x64.writeImageDouble(kitronik_VIEW128x64.matrix8x8(`
+        . # # # # # # .
+        . # . . . . . #
+        . # . . . . . #
+        . # . . . . # .
+        . # # # # # # .
+        . # . . . # . .
+        . # . . . . # .
+        . # . . . . . #
+        `), 8, 24)
+    kitronik_VIEW128x64.refresh()
+    basic.pause(1000)
+    kitronik_VIEW128x64.writeImageDouble(kitronik_VIEW128x64.matrix8x8(`
+        . . . . # . . .
+        . . . # . # . .
+        . . # . . . # .
+        . # . . . . . #
+        . # . . . . . #
+        . # # # # # # #
+        . # . . . . . #
+        . # . . . . . #
+        `), 16, 24)
+    kitronik_VIEW128x64.refresh()
+    basic.pause(1000)
+    kitronik_VIEW128x64.writeImageDouble(kitronik_VIEW128x64.matrix8x8(`
+        . # . . . . . #
+        . # # . . . . #
+        . # # # . . . #
+        . # . # # . . #
+        . # . . # # . #
+        . # . . . # # #
+        . # . . . . # #
+        . # . . . . . #
+        `), 24, 24)
+    kitronik_VIEW128x64.refresh()
+    basic.pause(1000)
+    kitronik_VIEW128x64.writeImageDouble(kitronik_VIEW128x64.matrix8x8(`
+        . # . . . . . #
+        . # . . . . # .
+        . # . . . # . .
+        . # . . # . . .
+        . # . # # . . .
+        . # # . . # . .
+        . # . . . . # .
+        . # . . . . . #
+        `), 32, 24)
+    kitronik_VIEW128x64.refresh()
 })
 let list2: Image[] = []
 let Delay = 0
